@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # config/routes.rb
   namespace :api do
     namespace :v1 do
-      resources :doctors, only: [:index, :create]
+      resources :doctors, only: [:index, :create, :destroy]
     end
   end
 
