@@ -1,5 +1,6 @@
 class Api::V1::ReservationsController < ApplicationController
   before_action :set_reservation, only: %i[destroy update]
+  before_action :authenticate_user!
 
   def index
     @reservations = Reservation.includes(:doctor).all
@@ -8,6 +9,7 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
+    @reservation.user = current_user
 
     if @reservation.save
       render json: { reservation: @reservation, success: true, message: "Doctor's appointment created successfully!" }, status: :created
@@ -39,6 +41,6 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:doctor_id, :date, :city, :user_id)
+    params.require(:reservation).permit(:doctor_id, :date, :city)
   end
 end
