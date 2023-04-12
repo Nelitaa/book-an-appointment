@@ -9,12 +9,10 @@ class Reservation < ApplicationRecord
   private
 
   def user_and_doctor_exist
-    unless User.exists?(self.user_id)
-      errors.add(:user_id, "does not exist")
-    end
+    errors.add(:user_id, 'does not exist') unless User.exists?(user_id)
 
-    unless Doctor.exists?(self.doctor_id)
-      errors.add(:doctor_id, "does not exist")
-    end
+    return if Doctor.exists?(doctor_id)
+
+    errors.add(:doctor_id, 'does not exist')
   end
 end

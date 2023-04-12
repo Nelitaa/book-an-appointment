@@ -12,7 +12,8 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation.user = current_user
 
     if @reservation.save
-      render json: { reservation: @reservation, success: true, message: "Doctor's appointment created successfully!" }, status: :created
+      render json: { reservation: @reservation, success: true,
+                     message: "Doctor's appointment created successfully!" }, status: :created
     else
       render json: { message: @reservation.errors.full_messages.join(', ') }, status: :unprocessable_entity
     end
@@ -20,7 +21,8 @@ class Api::V1::ReservationsController < ApplicationController
 
   def destroy
     if @reservation.destroy
-      render json: { reservation: @reservation, success: true, message: "Doctor's appointment was successfully destroyed!" }, status: :ok
+      render json: { reservation: @reservation, success: true,
+                     message: "Doctor's appointment was successfully destroyed!" }, status: :ok
     else
       render json: { error: "Failed to delete Doctor's appointment" }, status: :unprocessable_entity
     end
@@ -28,7 +30,8 @@ class Api::V1::ReservationsController < ApplicationController
 
   def update
     if @reservation.update(reservation_params)
-      render json: { reservation: @reservation, success: true, message: "Doctor's appointment was successfully updated!" }, status: :ok
+      render json: { reservation: @reservation, success: true,
+                     message: "Doctor's appointment was successfully updated!" }, status: :ok
     else
       render json: { error: "Failed to update Doctor's appointment" }, status: :unprocessable_entity
     end
