@@ -7,4 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Doctor.create(name: "Juan Muñoz", specialization: "Pediatry", city: "Miami", fee: 200, photo: "https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg", experience: 20)
-Reservation.create(user_id: 1, doctor_id: 1, date: "2023-04-10", time: "14:30:00", city: "Miami")
+Doctor.create(name: "Pedro Fuentes", specialization: "Pediatry", city: "New York", fee: 200, photo: "https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg", experience: 10)
+Reservation.create(user_id: 1, doctor_id: 1, date: "2023-04-10", city: "Miami")
+Reservation.create(user_id: 1, doctor_id: 2, date: "2023-04-11", city: "New York")

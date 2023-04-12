@@ -3,7 +3,6 @@ class Reservation < ApplicationRecord
   belongs_to :doctor
 
   validates :date, presence: true
-  validates :time, presence: true
   validates :city, presence: true
   validate :user_and_doctor_exist
 
