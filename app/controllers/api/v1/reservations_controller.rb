@@ -1,5 +1,5 @@
 class Api::V1::ReservationsController < ApplicationController
-  before_action :set_reservation, only: %i[destroy]
+  before_action :set_reservation, only: %i[destroy update]
 
   def index
     @reservations = Reservation.includes(:doctor).all
@@ -18,9 +18,17 @@ class Api::V1::ReservationsController < ApplicationController
 
   def destroy
     if @reservation.destroy
-      render json: { reservation: @reservation, success: true, message: 'Reservation was successfully destroyed!' }, status: :ok
+      render json: { reservation: @reservation, success: true, message: "Doctor's appointment was successfully destroyed!" }, status: :ok
     else
-      render json: { error: 'Failed to delete reservation' }, status: :unprocessable_entity
+      render json: { error: "Failed to delete Doctor's appointment" }, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @reservation.update(reservation_params)
+      render json: { reservation: @reservation, success: true, message: "Doctor's appointment was successfully updated!" }, status: :ok
+    else
+      render json: { error: "Failed to update Doctor's appointment" }, status: :unprocessable_entity
     end
   end
 
