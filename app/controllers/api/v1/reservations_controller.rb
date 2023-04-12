@@ -1,6 +1,6 @@
 class Api::V1::ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.includes(:doctor).all
+    @reservations = Reservation.all
     render json: @reservations
   end
 end
