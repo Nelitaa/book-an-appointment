@@ -30,4 +30,9 @@ RSpec.describe User, type: :model do
     subject.password = "123456789012345678901"
     expect(subject).to_not be_valid
   end
+
+  it "is not valid with a duplicate email" do
+    duplicate_user = subject.dup
+    expect(duplicate_user).not_to be_valid
+  end
 end
