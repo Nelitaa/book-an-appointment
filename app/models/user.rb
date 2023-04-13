@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_many :doctors, through: :reservations
 
   # validates :name, presence: true, length: { in: 1..50 }
+  validates :password, presence: true, length: { in: 6..20 }
 end
