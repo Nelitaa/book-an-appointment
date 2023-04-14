@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::DoctorsController, type: :request do
   describe 'GET /api/v1/doctors' do
-    let!(:user) { User.create(email: 'ex6@example.com', password: '123456') }
+    let(:user) { User.create(email: 'ex6@example.com', password: '123456') }
+    let(:payload) { { user_id: user.id } }
     let(:token) { JWT.encode({ user_id: user.id }, Rails.application.secret_key_base) }
     let(:headers) { { 'Authorization' => "Bearer #{token}" } }
 
