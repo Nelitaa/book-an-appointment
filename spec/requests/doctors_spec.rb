@@ -8,9 +8,13 @@ RSpec.describe Api::V1::DoctorsController, type: :request do
     let(:headers) { { 'Authorization' => "Bearer #{token}" } }
 
     before do
-      Doctor.create(name: "Juan Muñoz", specialization: "Pediatry", city: "Miami", fee: 200, photo: "https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg", experience: 20)
-      Doctor.create(name: "Pedro Fuentes", specialization: "Pediatry", city: "New York", fee: 200, photo: "https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg", experience: 10)
-      get '/api/v1/doctors', headers: headers
+      Doctor.create(name: 'Juan Muñoz', specialization: 'Pediatry', city: 'Miami', fee: 200,
+                    photo: 'https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg',
+                    experience: 20)
+      Doctor.create(name: 'Pedro Fuentes', specialization: 'Pediatry', city: 'New York', fee: 200,
+                    photo: 'https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg',
+                    experience: 10)
+      get '/api/v1/doctors', headers:
     end
 
     it 'returns a success response' do
@@ -26,14 +30,14 @@ RSpec.describe Api::V1::DoctorsController, type: :request do
   describe 'POST /api/v1/doctors/' do
     let!(:user) { User.create(email: 'ex6@example.com', password: '123456') }
     let(:valid_attributes) do
-      { name: "Juan Muñoz", specialization: "Pediatry", city: "Miami", fee: 200, photo: "https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg", experience: 20 }
+      { name: 'Juan Muñoz', specialization: 'Pediatry', city: 'Miami', fee: 200, photo: 'https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg', experience: 20 }
     end
     let(:token) { JWT.encode({ user_id: user.id }, Rails.application.secret_key_base) }
     let(:headers) { { 'Authorization' => "Bearer #{token}", 'Content-Type' => 'application/json' } }
 
     context 'when the request is valid' do
       before do
-        post '/api/v1/doctors', params: { doctor: valid_attributes }.to_json, headers: headers
+        post '/api/v1/doctors', params: { doctor: valid_attributes }.to_json, headers:
       end
 
       it 'creates a doctor' do
@@ -41,9 +45,9 @@ RSpec.describe Api::V1::DoctorsController, type: :request do
         expect(json_response['name']).to eq('Juan Muñoz')
         expect(json_response['specialization']).to eq('Pediatry')
         expect(json_response['city']).to eq('Miami')
-        expect(json_response['fee']).to eq("200.0")
+        expect(json_response['fee']).to eq('200.0')
         expect(json_response['photo']).to eq('https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg')
-        expect(json_response['experience']).to eq("20.0")
+        expect(json_response['experience']).to eq('20.0')
       end
 
       it 'returns a status code 201' do
@@ -59,7 +63,9 @@ RSpec.describe Api::V1::DoctorsController, type: :request do
     let(:headers) { { 'Authorization' => "Bearer #{token}" } }
 
     let!(:doctor) do
-      Doctor.create(name: "Juan Muñoz", specialization: "Pediatry", city: "Miami", fee: 200, photo: "https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg", experience: 20)
+      Doctor.create(name: 'Juan Muñoz', specialization: 'Pediatry', city: 'Miami', fee: 200,
+                    photo: 'https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg',
+                    experience: 20)
     end
 
     it 'deletes the doctor' do
