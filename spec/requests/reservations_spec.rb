@@ -1,5 +1,5 @@
 RSpec.describe Api::V1::ReservationsController, type: :request do
-  let(:user) { User.create(name:'John', email: 'john6@email.com', password: '123456') }
+  let(:user) { User.create(name: 'John', email: 'john6@email.com', password: '123456') }
   let(:doctor) do
     Doctor.create(name: 'Juan Muñoz', specialization: 'Pediatry', city: 'Miami', fee: 200,
                   photo: 'https://st2.depositphotos.com/1743476/5738/i/950/depositphotos_57385697-stock-photo-confident-mature-doctor.jpg',
@@ -27,9 +27,10 @@ RSpec.describe Api::V1::ReservationsController, type: :request do
 
   describe 'POST #create' do
     it 'creates a new reservation with valid params' do
-      expect {
-        post '/api/v1/reservations', params: { reservation: { doctor_id: doctor.id, date: '2023-04-11', city: 'New York' } }
-      }.to change(Reservation, :count).by(1)
+      expect do
+        post '/api/v1/reservations',
+             params: { reservation: { doctor_id: doctor.id, date: '2023-04-11', city: 'New York' } }
+      end.to change(Reservation, :count).by(1)
 
       json_response = JSON.parse(response.body)
       expect(response).to have_http_status(:created)
@@ -43,16 +44,17 @@ RSpec.describe Api::V1::ReservationsController, type: :request do
 
       json_response = JSON.parse(response.body)
       expect(response).to have_http_status(:unprocessable_entity)
-      expect(json_response['message']).to include("Doctor must exist, Doctor does not exist")
+      expect(json_response['message']).to include('Doctor must exist, Doctor does not exist')
     end
   end
 
   describe 'DELETE #destroy' do
     it 'destroys a reservation' do
-      reservation = Reservation.create(id: 1, user_id: user.id, doctor_id: doctor.id, date: '2023-04-11', city: 'New York')
-      expect {
+      reservation = Reservation.create(id: 1, user_id: user.id, doctor_id: doctor.id, date: '2023-04-11',
+                                       city: 'New York')
+      expect do
         delete "/api/v1/reservations/#{reservation.id}"
-      }.to change(Reservation, :count).by(-1)
+      end.to change(Reservation, :count).by(-1)
 
       json_response = JSON.parse(response.body)
       expect(response).to have_http_status(:ok)
