@@ -21,9 +21,6 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: book_appointment_app
-  host: localhost
-  username: postgres
-  password: heidy100
 
 development:
   <<: *default
