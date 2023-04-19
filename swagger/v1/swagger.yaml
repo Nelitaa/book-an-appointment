@@ -1,0 +1,192 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/doctors":
+    get:
+      summary: Retrieves all doctors
+      tags:
+      - Get doctors
+      responses:
+        '404':
+          description: doctors not found
+        '406':
+          description: unsupported accept header
+    post:
+      summary: Add a doctor
+      tags:
+      - Add a doctor
+      parameters:
+      - name: name
+        in: query
+        schema:
+          type: string
+      - name: specialization
+        in: query
+        schema:
+          type: string
+      - name: city
+        in: query
+        schema:
+          type: string
+      - name: fee
+        in: query
+        schema:
+          type: decimal
+      - name: experience
+        in: query
+        schema:
+          type: decimal
+      - name: photo
+        in: query
+        schema:
+          type: string
+      responses:
+        '201':
+          description: doctor created
+        '400':
+          description: invalid request
+        '422':
+          description: doctor already exists
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                doctor:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    specialization:
+                      type: string
+                    city:
+                      type: string
+                    fee:
+                      type: number
+                      format: float
+                    photo:
+                      type: string
+                    experience:
+                      type: number
+                      format: float
+                  required:
+                  - name
+                  - specialization
+                  - city
+                  - fee
+                  - photo
+                  - experience
+              required:
+              - doctor
+  "/api/v1/doctors/{id}":
+    delete:
+      summary: Deletes a doctor by ID
+      tags:
+      - Delete doctors
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '204':
+          description: doctor deleted
+        '404':
+          description: doctor not found
+  "/api/v1/reservations":
+    get:
+      summary: Retrieves all reservations
+      tags:
+      - Get reservations
+      parameters:
+      - name: reservation
+        in: query
+        properties:
+          doctor_id:
+            type: integer
+          date:
+            type: string
+          city:
+            type: string
+        required: true
+        description: Reservation parameters
+        schema:
+          type: object
+      responses:
+        '200':
+          description: reservations found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    doctor_id:
+                      type: integer
+                    date:
+                      type: string
+                    city:
+                      type: string
+                  required:
+                  - id
+                  - doctor_id
+                  - date
+                  - city
+            application/xml:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    doctor_id:
+                      type: integer
+                    date:
+                      type: string
+                    city:
+                      type: string
+                  required:
+                  - id
+                  - doctor_id
+                  - date
+                  - city
+        '400':
+          description: missing reservation parameters
+        '404':
+          description: reservations not found
+    post:
+      summary: Creates a reservation
+      tags:
+      - Add a reservation
+      parameters:
+      - name: doctor_id
+        in: query
+        schema:
+          type: number
+      - name: date
+        in: query
+        schema:
+          type: date
+      - name: city
+        in: query
+        schema:
+          type: string
+      responses:
+        '201':
+          description: reservation created
+        '422':
+          description: invalid request
+servers:
+- url: http://localhost:3000/
+  variables:
+    defaultHost:
+      default: http://localhost:3000/

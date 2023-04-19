@@ -116,6 +116,8 @@ GEM
     irb (1.6.3)
       reline (>= 0.3.0)
     json (2.6.3)
+    json-schema (3.0.0)
+      addressable (>= 2.8)
     jwt (2.7.0)
     loofah (2.20.0)
       crass (~> 1.0.2)
@@ -209,6 +211,20 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
+    rswag (2.8.0)
+      rswag-api (= 2.8.0)
+      rswag-specs (= 2.8.0)
+      rswag-ui (= 2.8.0)
+    rswag-api (2.8.0)
+      railties (>= 3.1, < 7.1)
+    rswag-specs (2.8.0)
+      activesupport (>= 3.1, < 7.1)
+      json-schema (>= 2.2, < 4.0)
+      railties (>= 3.1, < 7.1)
+      rspec-core (>= 2.14)
+    rswag-ui (2.8.0)
+      actionpack (>= 3.1, < 7.1)
+      railties (>= 3.1, < 7.1)
     rubocop (1.49.0)
       json (~> 2.3)
       parallel (~> 1.10)
@@ -265,6 +281,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 7.0.4, >= 7.0.4.3)
   rspec-rails
+  rswag
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver
   tzinfo-data
