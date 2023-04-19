@@ -1,6 +1,6 @@
 class Api::V1::ReservationsController < ApplicationController
   before_action :set_reservation, only: %i[destroy update]
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   def index
     @reservations = Reservation.includes(:doctor).all
@@ -44,6 +44,6 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:doctor_id, :date, :city)
+    params.require(:reservation).permit(:user_id, :doctor_id, :date, :city)
   end
 end
