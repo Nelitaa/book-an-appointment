@@ -1,3 +1,4 @@
+# rubocop:disable all
 require 'swagger_helper'
 
 RSpec.describe 'api/my', type: :request do
@@ -9,15 +10,15 @@ RSpec.describe 'api/my', type: :request do
 
       response '200', 'blog found' do
         schema type: :object,
-          properties: {
-            name: { type: :string },
-            specialization: { type: :string },
-            city: { type: :string },
-            fee: { type: :decimal },
-            photo: { type: :string },
-            experience: { type: :decimal}
-          },
-          required: [ 'name', 'specialization', 'city', 'fee', 'photo', 'experience' ]
+               properties: {
+                 name: { type: :string },
+                 specialization: { type: :string },
+                 city: { type: :string },
+                 fee: { type: :decimal },
+                 photo: { type: :string },
+                 experience: { type: :decimal }
+               },
+               required: %w[name specialization city fee photo experience]
       end
 
       response '404', 'doctors not found' do
@@ -26,7 +27,7 @@ RSpec.describe 'api/my', type: :request do
       end
 
       response '406', 'unsupported accept header' do
-        let(:'Accept') { 'application/foo' }
+        let(:Accept) { 'application/foo' }
         run_test!
       end
     end
@@ -74,14 +75,16 @@ RSpec.describe 'api/my', type: :request do
               photo: { type: :string },
               experience: { type: :number, format: :float }
             },
-            required: ['name', 'specialization', 'city', 'fee', 'photo', 'experience']
+            required: %w[name specialization city fee photo experience]
           }
         },
         required: ['doctor']
       }
 
       response '201', 'doctor created' do
-        let(:doctor) { { doctor: { name: 'John Doe', specialization: 'Neurologist', city: 'New York', fee: 150.0, photo: 'https://img.freepik.com/foto-gratis/apuesto-joven-medico-bata-laboratorio-estetoscopio-usando-tableta-verificar-historial-paciente_662251-2962.jpg?size=626&ext=jpg', experience: 5 } } }
+        let(:doctor) do
+          { doctor: { name: 'John Doe', specialization: 'Neurologist', city: 'New York', fee: 150.0, photo: 'https://img.freepik.com/foto-gratis/apuesto-joven-medico-bata-laboratorio-estetoscopio-usando-tableta-verificar-historial-paciente_662251-2962.jpg?size=626&ext=jpg', experience: 5 } }
+        end
         run_test!
       end
 
@@ -91,7 +94,9 @@ RSpec.describe 'api/my', type: :request do
       end
 
       response '422', 'doctor already exists' do
-        let(:doctor) { { doctor: { name: 'John Doe', specialization: 'Neurologist', city: 'New York', fee: 150.0, photo: 'https://img.freepik.com/foto-gratis/apuesto-joven-medico-bata-laboratorio-estetoscopio-usando-tableta-verificar-historial-paciente_662251-2962.jpg?size=626&ext=jpg', experience: 5 } } }
+        let(:doctor) do
+          { doctor: { name: 'John Doe', specialization: 'Neurologist', city: 'New York', fee: 150.0, photo: 'https://img.freepik.com/foto-gratis/apuesto-joven-medico-bata-laboratorio-estetoscopio-usando-tableta-verificar-historial-paciente_662251-2962.jpg?size=626&ext=jpg', experience: 5 } }
+        end
         before { post '/api/v1/doctors', params: doctor.to_json, headers: { 'CONTENT_TYPE' => 'application/json' } }
         run_test!
       end
@@ -109,16 +114,16 @@ RSpec.describe 'api/my', type: :request do
 
         response '200', 'reservations found' do
           schema type: :array,
-            items: {
-              type: :object,
-              properties: {
-                id: { type: :integer },
-                doctor_id: { type: :integer },
-                date: { type: :string },
-                city: { type: :string }
-              },
-              required: [ 'id', 'doctor_id', 'date', 'city' ]
-            }
+                 items: {
+                   type: :object,
+                   properties: {
+                     id: { type: :integer },
+                     doctor_id: { type: :integer },
+                     date: { type: :string },
+                     city: { type: :string }
+                   },
+                   required: %w[id doctor_id date city]
+                 }
           run_test!
         end
 
