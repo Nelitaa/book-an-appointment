@@ -29,3 +29,5 @@
 /config/master.key
 
 /config/database.yml
+
+/ruby-3.2.1

@@ -9,7 +9,7 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
-    @reservation.user = current_user
+    # @reservation.user = current_user
 
     if @reservation.save
       render json: { reservation: @reservation, success: true,

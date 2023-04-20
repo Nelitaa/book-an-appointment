@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  # root 'pages#home'
+
   # config/routes.rb
   namespace :api do
     namespace :v1 do
