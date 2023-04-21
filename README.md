@@ -18,6 +18,7 @@
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
+- [📝 Kanban Board](#kanban)
 
 # 📖 [BOOK_AN_APPOINTMENT] <a name="about-project"></a>
 
@@ -63,7 +64,7 @@ Back-end deployed API: http://159.223.131.191:3000/
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](http://162.243.166.190/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,17 +129,6 @@ To run tests, run the following command:
 - GitHub: [@Nelitaa](https://github.com/Nelitaa)
 - Twitter: [@MarianelaMunoz](https://twitter.com/MarianelaMunoz_)
 - LinkedIn: [Marianela-munoz](https://www.linkedin.com/in/marianela-munoz/)
-
-👤 **Emmanuel Mhango**
-
-- GitHub: [@emmanuellmhango](https://github.com/emmanuellmhango)
-- LinkedIn: [@emmanuellmhango](https://www.linkedin.com/in/emmanuellmhango)
-
-👤 **Benjamin Ejike**
-
-- GitHub: [@githubhandle](https://github.com/osbentech)
-- Twitter: [@twitterhandle](https://twitter.com/EjikeOsegbo)
-- LinkedIn: [LinkedIn](www.linkedin.com/in/benjamin-ejike-632248206)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
