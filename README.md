@@ -96,6 +96,15 @@ Install this project with:
 ```sh
   cd my-project
   bundle install
+  rails db:create, rails db:migrate, rails db:seed
+```
+
+```
+The project master.key is available now, but if you want to create your own follow these steps:
+
+1. Remove config/master.key and config/credentials.yml.enc if they exist.
+2. Run in the terminal: EDITOR=code rails credentials:edit
+3. This command will create a new master.key and credentials.yml.enc if they do not exist.
 ```
 
 ### Usage

@@ -26,8 +26,8 @@
 !/tmp/storage/.keep
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+# /config/master.key
 
-/config/database.yml
+# /config/database.yml
 
-/ruby-3.2.1
+# /ruby-3.2.1
