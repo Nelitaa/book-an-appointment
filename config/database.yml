@@ -1,0 +1,11 @@
+default: &default
+    adapter: postgresql
+    encoding: unicode
+    host: localhost
+    pool: 5
+    username: sammy
+    password: 12345678
+
+development:
+    <<: *default
+    database: appointment

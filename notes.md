@@ -1,0 +1,1 @@
+rails server --binding=159.223.131.191

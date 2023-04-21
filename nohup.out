@@ -1,0 +1,111 @@
+=> Booting Puma
+=> Rails 7.0.4.3 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Exiting
+/usr/local/lib/ruby/3.2.0/uri/generic.rb:601:in `check_host': bad component(expected host component): 159.223.131.191  (URI::InvalidComponentError)
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:640:in `host='
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:673:in `hostname='
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:190:in `initialize'
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:136:in `new'
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:136:in `build'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/puma/dsl.rb:266:in `port'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:106:in `set_host_port_to_config'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:50:in `block in config'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/puma/configuration.rb:162:in `configure'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/puma/configuration.rb:155:in `initialize'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:32:in `new'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:32:in `config'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:64:in `run'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/rack-2.2.6.4/lib/rack/server.rb:327:in `start'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands/server/server_command.rb:38:in `start'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands/server/server_command.rb:143:in `block in perform'
+	from <internal:kernel>:90:in `tap'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands/server/server_command.rb:134:in `perform'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor/command.rb:27:in `run'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor/invocation.rb:127:in `invoke_command'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor.rb:392:in `dispatch'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/command/base.rb:87:in `perform'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/command.rb:48:in `invoke'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands.rb:18:in `<main>'
+	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/bootsnap-1.16.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+	from bin/rails:4:in `<main>'
+=> Booting Puma
+=> Rails 7.0.4.3 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.6.5 (ruby 3.2.1-p31) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 29174
+* Listening on http://127.0.0.1:3000
+* Listening on http://[::1]:3000
+Use Ctrl-C to stop
+=> Booting Puma
+=> Rails 7.0.4.3 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Exiting
+/usr/local/lib/ruby/3.2.0/uri/generic.rb:601:in `check_host': bad component(expected host component): 159.223.131.191  (URI::InvalidComponentError)
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:640:in `host='
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:673:in `hostname='
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:190:in `initialize'
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:136:in `new'
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:136:in `build'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/puma/dsl.rb:266:in `port'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:106:in `set_host_port_to_config'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:50:in `block in config'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/puma/configuration.rb:162:in `configure'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/puma/configuration.rb:155:in `initialize'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:32:in `new'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:32:in `config'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:64:in `run'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/rack-2.2.6.4/lib/rack/server.rb:327:in `start'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands/server/server_command.rb:38:in `start'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands/server/server_command.rb:143:in `block in perform'
+	from <internal:kernel>:90:in `tap'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands/server/server_command.rb:134:in `perform'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor/command.rb:27:in `run'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor/invocation.rb:127:in `invoke_command'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor.rb:392:in `dispatch'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/command/base.rb:87:in `perform'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/command.rb:48:in `invoke'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands.rb:18:in `<main>'
+	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/bootsnap-1.16.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+	from bin/rails:4:in `<main>'
+=> Booting Puma
+=> Rails 7.0.4.3 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Exiting
+/usr/local/lib/ruby/3.2.0/uri/generic.rb:601:in `check_host': bad component(expected host component): 159.223.131.191  (URI::InvalidComponentError)
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:640:in `host='
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:673:in `hostname='
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:190:in `initialize'
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:136:in `new'
+	from /usr/local/lib/ruby/3.2.0/uri/generic.rb:136:in `build'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/puma/dsl.rb:266:in `port'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:106:in `set_host_port_to_config'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:50:in `block in config'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/puma/configuration.rb:162:in `configure'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/puma/configuration.rb:155:in `initialize'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:32:in `new'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:32:in `config'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/puma-5.6.5/lib/rack/handler/puma.rb:64:in `run'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/rack-2.2.6.4/lib/rack/server.rb:327:in `start'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands/server/server_command.rb:38:in `start'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands/server/server_command.rb:143:in `block in perform'
+	from <internal:kernel>:90:in `tap'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands/server/server_command.rb:134:in `perform'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor/command.rb:27:in `run'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor/invocation.rb:127:in `invoke_command'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/thor-1.2.1/lib/thor.rb:392:in `dispatch'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/command/base.rb:87:in `perform'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/command.rb:48:in `invoke'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.3/lib/rails/commands.rb:18:in `<main>'
+	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+	from <internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:37:in `require'
+	from /usr/local/lib/ruby/gems/3.2.0/gems/bootsnap-1.16.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+	from bin/rails:4:in `<main>'
