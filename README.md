@@ -23,6 +23,11 @@
 
 **[Book_an_appointment]** is a app to book an appointment with a doctor specialize in your needs. The user can reserved an appointment and add more doctor.
 
+[Link to the frontend](https://github.com/emmanuellmhango/book-an-appointment/pull/17)
+
+Front-end deployed website: http://162.243.166.190/
+Back-end deployed API: http://159.223.131.191:3000/
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -168,5 +173,13 @@ The design was provided by [Murat Korkmaz](https://www.behance.net/muratk) on Be
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 Kanban Board <a name="kanban"></a>
+
+- This is the link to our [Kanban board](https://github.com/users/Nelitaa/projects/9)
+- This is the link to our issue with the screenshots of the initial state of our Kanban board:
+  [Initial state Kanban](https://github.com/Nelitaa/book-an-appointment-back-end/issues/22)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
