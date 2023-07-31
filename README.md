@@ -20,9 +20,9 @@
 - [📝 License](#license)
 - [📝 Kanban Board](#kanban)
 
-# 📖 [BOOK_AN_APPOINTMENT] <a name="about-project"></a>
+# 📖 BOOK AN APPOINTMENT <a name="about-project"></a>
 
-**[Book_an_appointment]** is a app to book an appointment with a doctor specialize in your needs. The user can reserved an appointment and add more doctor.
+**Book an appointment** is a app to book an appointment with a doctor specialize in your needs. The user can reserved an appointment and add more doctor.
 
 [Link to the frontend](https://github.com/emmanuellmhango/book-an-appointment/pull/17)
 
